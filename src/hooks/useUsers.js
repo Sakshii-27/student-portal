@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
-import { fetchUsers } from '../services/api';
+import { useState, useEffect } from "react";
+import { fetchUsers } from "../services/api";
 
 export const useUsers = () => {
   const [users, setUsers] = useState([]);
@@ -13,7 +13,7 @@ export const useUsers = () => {
       const data = await fetchUsers();
       setUsers(data);
     } catch (err) {
-      setError(err.message || 'Failed to load users. Please try again later.');
+      setError(err.message || "Failed to load users. Please try again later.");
     } finally {
       setLoading(false);
     }
@@ -28,16 +28,17 @@ export const useUsers = () => {
   };
 
   const getUserById = (id) => {
-    return users.find(user => user.id === id);
+    return users.find((user) => user.id === id);
   };
 
   const searchUsers = (query) => {
     if (!query) return users;
-    
-    return users.filter(user => 
-      user.name.toLowerCase().includes(query.toLowerCase()) ||
-      user.email.toLowerCase().includes(query.toLowerCase()) ||
-      user.username.toLowerCase().includes(query.toLowerCase())
+
+    return users.filter(
+      (user) =>
+        user.name.toLowerCase().includes(query.toLowerCase()) ||
+        user.email.toLowerCase().includes(query.toLowerCase()) ||
+        user.username.toLowerCase().includes(query.toLowerCase())
     );
   };
 
@@ -47,6 +48,6 @@ export const useUsers = () => {
     error,
     refreshUsers,
     getUserById,
-    searchUsers
+    searchUsers,
   };
 };

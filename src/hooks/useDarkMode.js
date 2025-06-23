@@ -1,5 +1,5 @@
-import { useDarkMode as useDarkModeContext } from '../context/DarkModeContext';
+import { useDarkMode as useDarkModeContext } from "../context/DarkModeContext";
 
 export const useDarkMode = () => {
-    return useDarkModeContext();
+  return useDarkModeContext();
 };
