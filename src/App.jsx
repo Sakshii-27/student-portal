@@ -1,13 +1,18 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import { DarkModeProvider } from './context/DarkModeContext';
-import { AuthProvider } from './context/AuthContext';
-import { Navbar } from './components/layout/Navbar';
-import { LoginPage } from './components/auth/Login';
-import { SignupPage } from './components/auth/Signup';
-import { HomePage } from './components/home/Home';
-import { UsersPage } from './components/users/Users';
-import { DashboardPage } from './components/dashboard/Dashboard';
-import { ProtectedRoute } from './components/auth/ProtectedRoute';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import { DarkModeProvider } from "./context/DarkModeContext";
+import { AuthProvider } from "./context/AuthContext";
+import { Navbar } from "./components/layout/Navbar";
+import { LoginPage } from "./components/auth/Login";
+import { SignupPage } from "./components/auth/Signup";
+import { HomePage } from "./components/home/Home";
+import { UsersPage } from "./components/users/Users";
+import Dashboard from "./components/dashboard/Dashboard";
+import { ProtectedRoute } from "./components/auth/ProtectedRoute";
 
 const App = () => {
   return (
@@ -26,8 +31,11 @@ const App = () => {
                     <Routes>
                       <Route path="/home" element={<HomePage />} />
                       <Route path="/users" element={<UsersPage />} />
-                      <Route path="/dashboard" element={<DashboardPage />} />
-                      <Route path="/" element={<Navigate to="/home" replace />} />
+                      <Route path="/dashboard" element={<Dashboard />} />
+                      <Route
+                        path="/"
+                        element={<Navigate to="/home" replace />}
+                      />
                     </Routes>
                   </ProtectedRoute>
                 }
