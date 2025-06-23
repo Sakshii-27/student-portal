@@ -1,12 +1,70 @@
-# React + Vite
+# 🎓 Student Portal 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Dashboard Screenshot](./screenshot/Dashboard(dark).png )  
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern student dashboard built with React and Tailwind CSS, featuring authentication, data visualization, and responsive design.
 
-## Expanding the ESLint configuration
+## ✨ Features Implemented
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+###  Authentication System
+- Login/Logout functionality with context API
+- Protected routes for dashboard access
+- Mock user validation
+
+###  Dashboard
+- Summary cards (GPA, Attendance, Subjects)
+- Responsive grid layout
+- Dark mode toggle
+- Recent activity feed
+
+###  Student Management
+- User directory from [JSONPlaceholder API](https://jsonplaceholder.typicode.com/users)
+- Profile cards with contact information
+- Loading and error states
+
+###  UI/UX
+- Sticky navbar with user avatar
+- Mobile-first responsive design
+- Animated transitions
+- Accessible color schemes
+
+## 📸 Screenshots
+
+| Login Page | Dashboard (Light) | Dashboard (Dark) |
+|------------|-------------------|------------------|
+| ![Login](./screenshots/login.png) | ![Light Mode](./screenshots/dashboard-light.png) | ![Dark Mode](./screenshots/dashboard-dark.png) |
+
+*(Replace with your actual screenshot files)*
+
+## 🧠 Challenges & Learnings
+
+### 🚧 Technical Challenges
+1. **Authentication Flow**  
+   Implementing protected routes with React Router required careful state management between components.
+
+2. **Dark Mode Toggle**  
+   Persisting user theme preference across page reloads using localStorage while avoiding flash-of-unstyled-content (FOUC).
+
+3. **API Data Handling**  
+   Managing loading/error states when fetching user data improved my async operations understanding.
+
+### 💡 Key Learnings
+- **Tailwind Best Practices**: Learned to organize utility classes and use `@apply` for repeated styles
+- **React Performance**: Memoization techniques for preventing unnecessary re-renders
+- **DevOps**: Setting up Vite with PostCSS required deeper build process understanding
+- **UI Principles**: Contrast ratios for accessibility in dark/light modes
+
+## 🛠️ Tech Stack
+- React 18
+- Tailwind CSS 3
+- Vite
+- React Router 6
+- Axios
+- Heroicons
+
+## 🚀 Getting Started
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/your-username/student-portal.git
